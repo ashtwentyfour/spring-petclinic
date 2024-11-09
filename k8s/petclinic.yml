@@ -32,6 +32,8 @@ spec:
         - name: workload
           image: dsyer/petclinic
           env:
+            - name: DT_CUSTOM_PROP
+              value: "Environment=Dev App=flask-sample Platform=AKS"
             - name: SPRING_PROFILES_ACTIVE
               value: postgres
             - name: SERVICE_BINDING_ROOT
